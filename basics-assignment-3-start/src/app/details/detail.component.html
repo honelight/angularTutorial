@@ -1,0 +1,7 @@
+<p class="white-text">test out</p>
+
+<button class="btn btn-primary" (click)="onClickButton()">Display Details</button>
+<p [hidden]="hidden">Secrete Password = tuna</p>
+<p *ngFor="let element of logMessage"
+   [ngStyle]="{backgroundColor: checkColor(element)}"
+   [ngClass]="{'white-text': checkIndex(element)}">{{element}}</p>
