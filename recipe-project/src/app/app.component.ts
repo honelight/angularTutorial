@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {ModuleExportMetadata} from "@angular/compiler-cli";
 
 @Component({
   selector: 'app-root',
