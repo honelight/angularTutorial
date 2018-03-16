@@ -9,17 +9,15 @@ export class DropDownDirective{
 
   constructor(private elRef: ElementRef,  private renderer: Renderer2){}
 
-  @Input() defaultClass = "btn-group";
+  dropDown = false;
 
   @HostListener('click')
   click(eventData: Event){
-    if(this.defaultClass === "btn-group"){
-      this.renderer.addClass(this.elRef.nativeElement, "open");
-      this.defaultClass = "btn-group open";
-    }
-    else{
-      this.renderer.removeClass(this.elRef.nativeElement, "open");
-      this.defaultClass = "btn-group";
+    this.dropDown = !this.dropDown;
+    if(this.dropDown){
+      this.renderer.addClass(this.elRef.nativeElement,"open");
+    }else{
+      this.renderer.removeClass(this.elRef.nativeElement,"open");
     }
   }
 }
