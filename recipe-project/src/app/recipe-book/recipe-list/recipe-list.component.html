@@ -4,6 +4,6 @@
   </div>
   <hr>
   <div class="col-xs-12">
-    <app-recipe-item *ngFor="let element of recipes, let idx = index" [recipeItem]="element" (recipeItemEmitter)="onListEventEmit($event)"></app-recipe-item>
+    <app-recipe-item *ngFor="let element of recipes, let idx = index" [recipeItem]="element"></app-recipe-item>
   </div>
 </div>
