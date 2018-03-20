@@ -6,8 +6,10 @@
 
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a href="#" (click)="onSwitchRecipe()">Recipes</a></li>
-        <li><a href="#" (click)="onSwitchShopList()">Shopping List</a></li>
+        <!--<li routerLink="/recipes"><a href="#" (click)="onSwitchRecipe()">Recipes</a></li>-->
+        <!--<li routerLink="/shopList"><a href="#" (click)="onSwitchShopList()">Shopping List</a></li>-->
+        <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/shopList']">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>

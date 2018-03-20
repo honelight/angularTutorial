@@ -10,14 +10,14 @@ export class HeaderCompoent {
 
   }
 
-  @Output() switchEmitter: EventEmitter<string> = new EventEmitter<string>();
-
-
-  onSwitchRecipe(){
-    this.switchEmitter.emit('recipe');
-  }
-
-  onSwitchShopList(){
-    this.switchEmitter.emit('shopList');
-  }
+  // @Output() switchEmitter: EventEmitter<string> = new EventEmitter<string>();
+  //
+  //
+  // onSwitchRecipe(){
+  //   this.switchEmitter.emit('recipe');
+  // }
+  //
+  // onSwitchShopList(){
+  //   this.switchEmitter.emit('shopList');
+  // }
 }

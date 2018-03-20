@@ -9,15 +9,15 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  mode = 'recipe';
-
-  onModeSwitched(input: string){
-    if (input === 'recipe'){
-      this.mode = 'recipe'
-    }
-    else if (input === 'shopList'){
-      this.mode = 'shopList';
-    }
-  }
+  // mode = 'recipe';
+  //
+  // onModeSwitched(input: string){
+  //   if (input === 'recipe'){
+  //     this.mode = 'recipe'
+  //   }
+  //   else if (input === 'shopList'){
+  //     this.mode = 'shopList';
+  //   }
+  // }
 
 }
