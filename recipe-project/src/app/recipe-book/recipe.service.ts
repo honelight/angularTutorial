@@ -29,7 +29,9 @@ export class RecipeService{
         ])
   ];
 
-  constructor(private shoppingListService:ShoppingListService){
+  constructor(
+    private shoppingListService:ShoppingListService
+  ){
 
   }
 
@@ -43,6 +45,18 @@ export class RecipeService{
   addIngredients(ingredients:Ingredient[]){
     for (var ingredient of ingredients){
       this.shoppingListService.addIngredients(ingredient);
+    }
+  }
+
+  getRecipe(id:Number):Recipe{
+    var output = this.recipes.filter(instance=>
+      instance.id === id
+    )
+    if (output.length === 0){
+      return null;
+    }
+    else {
+      return output[0];
     }
   }
 
