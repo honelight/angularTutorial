@@ -36,7 +36,7 @@ export class RecipeService{
   }
 
   @Input() currentRecipe:Recipe;
-  @Output() currentRecipeChangeEmitter:EventEmitter<Recipe> = new EventEmitter<Recipe>();
+  // @Output() currentRecipeChangeEmitter:EventEmitter<Recipe> = new EventEmitter<Recipe>();
 
   getRecipes(){
     return this.recipes.slice();
@@ -46,6 +46,7 @@ export class RecipeService{
     for (var ingredient of ingredients){
       this.shoppingListService.addIngredients(ingredient);
     }
+    this.shoppingListService.ingredientsChanged.next(this.shoppingListService.ingredients);
   }
 
   getRecipe(id:Number):Recipe{

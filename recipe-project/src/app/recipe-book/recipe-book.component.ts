@@ -10,20 +10,20 @@ import {RecipeService} from "./recipe.service";
 })
 export class RecipeBookComponent implements OnInit {
 
-  currentRecipe:Recipe;
+  constructor(){}
 
-  constructor(private recipeService:RecipeService) {
-  }
+  // constructor(private recipeService:RecipeService) {
+  // }
 
-  onRecipeSelected(recipe:Recipe){
-    this.currentRecipe=recipe;
-  }
+  // onRecipeSelected(recipe:Recipe){
+  //   this.currentRecipe=recipe;
+  // }
 
   ngOnInit() {
-    this.recipeService.currentRecipeChangeEmitter.subscribe(
-      (recipe:Recipe)=>{
-        this.currentRecipe = recipe;
-      }
-    )
+    // this.recipeService.currentRecipeChangeEmitter.subscribe(
+    //   (recipe:Recipe)=>{
+    //     this.currentRecipe = recipe;
+    //   }
+    // )
   }
 }
