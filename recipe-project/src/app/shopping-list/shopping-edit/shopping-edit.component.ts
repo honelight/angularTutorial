@@ -1,6 +1,7 @@
 import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Ingredient} from "../../shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-shopping-edit',
@@ -9,6 +10,8 @@ import {ShoppingListService} from "../shopping-list.service";
 })
 export class ShoppingEditComponent implements OnInit {
   constructor(private shoppingListService:ShoppingListService) { }
+
+  shoppingEditFormGroup:FormGroup;
 
   // @Output() addIngredientEmitter:EventEmitter<Ingredient> = new EventEmitter<Ingredient>()
   @ViewChild('nameInput') nameInputRef: ElementRef;
@@ -33,7 +36,22 @@ export class ShoppingEditComponent implements OnInit {
     )
   }
 
+  onAddItem(){
+    // console.log(this.shoppingEditFormGroup.get("name").value);
+    // console.log(this.shoppingEditFormGroup.get("amount").value);
+    this.shoppingListService.addIngredients(
+      new Ingredient(
+        this.shoppingEditFormGroup.get("name").value,
+        Number(this.shoppingEditFormGroup.get("amount").value)
+      )
+    )
+  }
+
   ngOnInit() {
+    this.shoppingEditFormGroup = new FormGroup({
+      "name":new FormControl(null, [Validators.required]),
+      "amount":new FormControl(null, [Validators.required])
+    });
   }
 
 }

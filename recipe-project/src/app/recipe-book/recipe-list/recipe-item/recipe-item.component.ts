@@ -19,9 +19,9 @@ export class RecipeItemComponent implements OnInit {
   //   this.recipeItemEmitter.emit(this.recipeItem);
   // }
 
-  changeRecipe(){
-    this.recipeService.currentRecipeChangeEmitter.emit(this.recipeItem);
-  }
+  // changeRecipe(){
+  //   this.recipeService.currentRecipeChangeEmitter.emit(this.recipeItem);
+  // }
 
   ngOnInit() {
   }
