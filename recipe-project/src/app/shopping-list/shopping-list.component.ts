@@ -1,7 +1,5 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Ingredient} from '../shared/ingredient.model';
-import {letProto} from "rxjs/operator/let";
-import {InternalNgModuleRef} from "@angular/core/src/linker/ng_module_factory";
 import {ShoppingListService} from "./shopping-list.service";
 import {Subscription} from "rxjs/Subscription";
 
@@ -33,6 +31,11 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(){
     this.subscription.unsubscribe();
+  }
+
+  selectIngredient(index:number){
+    this.shoppingListService.selectIngredient = index;
+    this.shoppingListService.startedEditting.next(index);
   }
 
 }

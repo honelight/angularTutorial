@@ -2,9 +2,14 @@ import {EventEmitter, Injectable, Input, Output} from "@angular/core";
 import {Recipe} from "./recipe.model";
 import {Ingredient} from "../shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list/shopping-list.service";
+import {Subject} from "rxjs/Subject";
+import {letProto} from "rxjs/operator/let";
 
 @Injectable()
 export class RecipeService{
+
+  recipesChanged = new Subject<Recipe[]>();
+  editSubject = new Subject<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe(
@@ -61,4 +66,40 @@ export class RecipeService{
     }
   }
 
+  editRecipe(recipe:Recipe){
+    var i = 0;
+    for (let index=0; index < this.recipes.length; index++){
+      if(this.recipes[index].id === recipe.id){
+        i = index;
+        break;
+      }
+    }
+    this.recipes[i]=recipe;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  addRecipe(name:string, description:string, picture:string, ingredients:Ingredient[]){
+    var indexes:number[] = this.recipes.map(instance=>instance.id);
+    var maxIndex = Math.max(...indexes);
+    this.recipes.push(new Recipe(
+      maxIndex+1,
+      name,
+      description,
+      picture,
+      ingredients
+    ));
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  deleteRecipe(id:number){
+    var i = 0;
+    for (let index=0; index < this.recipes.length; index++){
+      if(this.recipes[i].id === id){
+        i = index;
+        break;
+      }
+    }
+    this.recipes.splice(i, 1);
+    this.recipesChanged.next(this.recipes.slice());
+  }
 }

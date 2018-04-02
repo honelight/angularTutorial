@@ -11,6 +11,11 @@ export class ShoppingListService{
     new Ingredient('Tomatoes', 10)
   ];
 
+  startedEditting = new Subject<number>();
+  ingredientsChanged = new Subject<Ingredient[]>();
+
+
+
   addIngredients(ingredient:Ingredient){
     for(let element of this.ingredients){
       if(element.name === ingredient.name){
@@ -22,10 +27,31 @@ export class ShoppingListService{
     this.ingredients.push(ingredient);
   }
 
-  ingredientsChanged = new Subject<Ingredient[]>();
+  selectIngredient:number = null;
+
+  removeIngredient(){
+    if (this.selectIngredient!=null){
+      this.ingredients.splice(this.selectIngredient,1);
+    }
+    this.selectIngredient=null;
+  }
+
+  removeIngredientIdx(index:number){
+    if (index>=0 && index< this.ingredients.length){
+      this.ingredients.splice(index, 1);
+    }
+  }
 
   getIngredients(){
 
+  }
+
+  getIngredient(index:number){
+    return this.ingredients[index];
+  }
+
+  updateIngredient(index:number, ingredient:Ingredient){
+    this.ingredients[index]=ingredient;
   }
 
 }
