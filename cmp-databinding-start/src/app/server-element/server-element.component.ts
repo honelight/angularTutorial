@@ -16,7 +16,7 @@ export class ServerElementComponent
   implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked,
               AfterViewInit, AfterViewChecked, OnDestroy {
 
-  @Input('srvElement') element: {type: string, name: string, content: string}
+  @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
   @ViewChild('heading') header: ElementRef;
   @ContentChild('contentParagraph') paragraph: ElementRef;

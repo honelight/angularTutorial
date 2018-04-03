@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\honelight\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_WebCallBackEnd.922033236.00" t="ExcludeRecursive" />
-    <e p="D:\angularTutorial\WebCallBackEnd" t="IncludeFlat">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="WebApplication1" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -25,5 +24,6 @@
       </e>
       <e p="WebCallBackEnd.sln" t="IncludeFlat" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_WebCallBackEnd.-2009016015.00" t="ExcludeRecursive" />
   </component>
 </project>

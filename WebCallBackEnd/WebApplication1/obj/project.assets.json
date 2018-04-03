@@ -12535,33 +12535,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\honelight\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/hongyaoshi/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\angularTutorial\\WebCallBackEnd\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "/Users/hongyaoshi/Hongyao/angularTutorial/angularTutorial/WebCallBackEnd/WebApplication1/WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\angularTutorial\\WebCallBackEnd\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\honelight\\.nuget\\packages\\",
-      "outputPath": "D:\\angularTutorial\\WebCallBackEnd\\WebApplication1\\obj\\",
+      "projectPath": "/Users/hongyaoshi/Hongyao/angularTutorial/angularTutorial/WebCallBackEnd/WebApplication1/WebApplication1.csproj",
+      "packagesPath": "/Users/hongyaoshi/.nuget/packages/",
+      "outputPath": "/Users/hongyaoshi/Hongyao/angularTutorial/angularTutorial/WebCallBackEnd/WebApplication1/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\honelight\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "/Users/hongyaoshi/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
