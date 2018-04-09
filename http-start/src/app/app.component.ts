@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ServerService} from "./server.service";
+import {Response} from "@angular/http";
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,10 @@ export class AppComponent {
       id: this.generateId()
     }
   ];
+
+  newServers = [];
+
+
   constructor(private serverService:ServerService){}
 
   onAddServer(name: string) {
@@ -38,6 +43,17 @@ export class AppComponent {
         console.log(response);
       },
       (error) => {
+        console.log(error);
+      }
+    )
+  }
+
+  onGet(){
+    this.serverService.getServers().subscribe(
+      (response:Response)=>{
+        const data = response;
+        console.log(data);
+      },(error)=>{
         console.log(error);
       }
     )

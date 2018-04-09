@@ -66,6 +66,11 @@ export class RecipeService{
     }
   }
 
+  setRecipes(recipes:Recipe[]){
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
   editRecipe(recipe:Recipe){
     var i = 0;
     for (let index=0; index < this.recipes.length; index++){

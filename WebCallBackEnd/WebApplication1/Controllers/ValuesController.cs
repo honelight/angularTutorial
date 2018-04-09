@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 namespace WebApplication1.Controllers
 {
@@ -27,6 +28,15 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public void Post([FromBody]string value)
         {
+        }
+
+        [HttpPost]
+        public void AddServers([FromBody]Server[] servers)
+        {
+            foreach (var server in servers)
+            {
+                ServerStorage.servers.Add(server);
+            }
         }
 
         // PUT api/values/5
