@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\honelight\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_vega.207314868.00" t="ExcludeRecursive" />
-    <e p="D:\angularTutorial\vega" t="IncludeFlat">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="vega" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CarInfo" t="Include">
+          <e p="CarInfo.cs" t="Include" />
+        </e>
         <e p="ClientApp" t="Include">
           <e p="app" t="Include">
             <e p="app.browser.module.ts" t="Include" />
@@ -45,7 +47,6 @@
           <e p="dist" t="Include">
             <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
             <e p="main-server.js" t="Include" />
-            <e p="vendor-manifest.json" t="Include" />
             <e p="vendor.js" t="Include" />
           </e>
           <e p="test" t="Include">
@@ -54,6 +55,7 @@
           </e>
         </e>
         <e p="Controllers" t="Include">
+          <e p="CarController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="SampleDataController.cs" t="Include" />
         </e>
@@ -97,5 +99,6 @@
       </e>
       <e p="vega.sln" t="IncludeFlat" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_vega.-545058479.00" t="ExcludeRecursive" />
   </component>
 </project>
