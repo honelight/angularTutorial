@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace vega.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
         private static string[] Summaries = new[]

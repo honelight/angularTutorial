@@ -4,7 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using vega.CarInfo;
+using Microsoft.EntityFrameworkCore;
+using vega.Data;
+using vega.Models;
 
 
 namespace vega.Controllers
@@ -12,16 +14,22 @@ namespace vega.Controllers
     [Route("api/[controller]")]
     public class CarController:Controller
     {
+        private CarContext context;
+        public CarController(CarContext context)
+        {
+            this.context = context;
+        }
+        
         [HttpGet("makes")]
         public IEnumerable<CarMake> GetCarMakes()
         {
-            return new List<CarMake>();
+            return context.carMakes.ToList();
         }
 
         [HttpGet("features")]
         public IEnumerable<CarFeature> GetCarFeatures()
         {
-            return new List<CarFeature>();
+            return context.carFeatures.ToList();
         }
     }
 }
